@@ -1,9 +1,0 @@
-{
-  "name": "@backroad/backroad",
-  "version": "1.4.0-alpha.5",
-  "main": "src/index.js",
-  "publishConfig": {
-    "access": "public"
-  },
-  "dependencies": {}
-}
