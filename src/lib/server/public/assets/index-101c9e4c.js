@@ -1,8 +1,9 @@
 (function() {
   window.test_uuid_fix = 'test_from_custom_script';
-  if (!window.crypto?.randomUUID) {
+  console.log('------ custom fix loaded ------')
+  if (!window.crypto || (window.crypto && !window.crypto.randomUUID)) {
     console.log('------ no crypto object found. Injecting uuid fix. ------')
-    window.crypto.randomUUID = (function() {
+    window.crypto.randomUUID = function() {
       return (function uuidv4() {
         return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
           var r = Math.random() * 16 | 0,
@@ -10,7 +11,7 @@
           return v.toString(16);
         });
       })();
-    })();
+    };
   }
 })();
 

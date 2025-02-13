@@ -3854,11 +3854,11 @@ h3 {
 }
 
 /* add bg color to columns */
-.h-screen .mx-auto .flex .container:nth-child(odd) p {
+.md\:grid .container:nth-child(odd) p {
   background-color: #fff9c4;
 }
 
-.h-screen .mx-auto .flex .container:nth-child(even) p {
+.md\:grid .container:nth-child(even) p {
   background-color: #e3f2fd;
 }
 

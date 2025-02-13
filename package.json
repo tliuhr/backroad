@@ -1,6 +1,6 @@
 {
   "name": "@tliuhr/backroad",
-  "version": "1.5.3",
+  "version": "1.5.6",
   "main": "./src/index.js",
   "publishConfig": {
     "access": "public"
