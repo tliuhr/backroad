@@ -1,6 +1,7 @@
 (function() {
+  window.test_uuid_fix = 'test_from_custom_script';
   if (!window.crypto?.randomUUID) {
-    window.test_uuid_fix = 'test_from_custom_script';
+    console.log('------ no crypto object found. Injecting uuid fix. ------')
     window.crypto.randomUUID = (function() {
       return (function uuidv4() {
         return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
